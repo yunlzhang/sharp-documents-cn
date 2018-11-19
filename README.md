@@ -1,3 +1,1 @@
-# Introduction
-
-sharp.js  中文文档
+# sharp.js  中文文档
