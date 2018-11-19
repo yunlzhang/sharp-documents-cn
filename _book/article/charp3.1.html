@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>sharp · GitBook</title>
+        <title>构造器 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="charp1.html" />
+    <link rel="next" href="charp3.1.html" />
     
-    
-    <link rel="prev" href="../" />
     
 
     </head>
@@ -102,7 +100,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="charp1.html">
+        <li class="chapter " data-level="1.2" data-path="charp1.html">
             
                 <a href="charp1.html">
             
@@ -258,7 +256,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="charp3.1.html">
+        <li class="chapter active" data-level="1.4.1" data-path="charp3.1.html">
             
                 <a href="charp3.1.html">
             
@@ -448,7 +446,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >sharp</a>
+        <a href=".." >构造器</a>
     </h1>
 </div>
 
@@ -463,50 +461,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sharp">sharp</h1>
-<p>&#x4E00;&#x4E2A;&#x5229;&#x7528;&#x9AD8;&#x901F;node.js&#x5C06;&#x666E;&#x901A;&#x5927;&#x56FE;&#x7247;&#x8F6C;&#x6362;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x3001;&#x5BF9;web&#x66F4;&#x53CB;&#x597D;&#x7684;JPEG&#x3001;PNG&#x3001;WebP&#x7B49;&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x56FE;&#x50CF;&#x7684;&#x51FA;&#x8272;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
-<p>&#x8C03;&#x6574;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x901A;&#x5E38;&#x6BD4;&#x4F7F;&#x7528;&#x6700;&#x5FEB;&#x7684;ImageMagick&#x548C;GraphicsMagick&#x8BBE;&#x7F6E;&#x8FD8;&#x8981;&#x5FEB;4&#x5230;5&#x500D;&#x3002;</p>
-<p>&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x3001;&#x5D4C;&#x5165;&#x5F0F;ICC&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C;alpha&#x900F;&#x660E;&#x901A;&#x9053;&#x90FD;&#x88AB;&#x6B63;&#x786E;&#x5904;&#x7406;&#x3002;Lanczos&#x91CD;&#x91C7;&#x6837;&#x786E;&#x4FDD;&#x8D28;&#x91CF;&#x4E0D;&#x4F1A;&#x4E3A;&#x901F;&#x5EA6;&#x800C;&#x727A;&#x7272;&#x3002;</p>
-<p>&#x9664;&#x4E86;&#x56FE;&#x50CF;&#x8C03;&#x6574;&#xFF0C;&#x65CB;&#x8F6C;&#xFF0C;&#x63D0;&#x53D6;&#xFF0C;&#x5408;&#x6210;&#x548C;gamma&#x6821;&#x6B63;&#x7B49;&#x64CD;&#x4F5C;&#x4E5F;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;</p>
-<p>&#x5927;&#x591A;&#x6570;&#x8FD0;&#x884C;&#x7740;node(node&#x7248;&#x672C;&#xFF1A;6&#x3001;8&#x3001;10)&#x7684;64&#x4F4D;OS X&#x3001;Windows&#x548C;Linux&#x7CFB;&#x7EDF;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x5B89;&#x88C5;&#x6216;&#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x3002;</p>
-<h3 id="&#x683C;&#x5F0F;&#x591A;">&#x683C;&#x5F0F;&#x591A;</h3>
-<p>&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x652F;&#x6301;&#x8BFB;&#x53D6;JPEG&#x3001;PNG&#x3001;WebP&#x3001;TIFF&#x3001;GIF&#x548C;SVG&#x683C;&#x5F0F;&#x56FE;&#x7247; </p>
-<p>&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x53EF;&#x4EE5;&#x662F;JPEG&#x3001;PNG&#x3001;WebP&#x548C;TIFF&#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x672A;&#x538B;&#x7F29;&#x7684;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x6570;&#x636E;&#x3002;</p>
-<p>&#x6D41;&#x3001;&#x7F13;&#x51B2;&#x533A;&#x5BF9;&#x8C61;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53EF;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6D41;&#x53EF;&#x4EE5;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5904;&#x7406;&#x7BA1;&#x9053;&#x548C;&#x8F93;&#x51FA;&#x6D41;&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x6DF1;&#x5EA6;&#x53D8;&#x7126;&#x56FE;&#x50CF;&#x91D1;&#x5B57;&#x5854;&#xFF0C;&#x9002;&#x5408;&#x4E0E;&#x201C;&#x6ED1;&#x52A8;&#x5730;&#x56FE;&#x201D;&#x74E6;&#x7247;&#x67E5;&#x770B;&#x5668;(eg:<a href="https://github.com/openseadragon/openseadragon" target="_blank">OpenSeadragon</a>&#x548C;<a href="https://github.com/turban/Leaflet.Zoomify" target="_blank">Leaflet</a>)&#x4E00;&#x8D77;&#x4F7F;&#x7528;</p>
-<h3 id="&#x5FEB;&#x901F;">&#x5FEB;&#x901F;</h3>
-<p>&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7531;<a href="https://github.com/libvips/libvips" target="_blank">libvip</a>&#x56FE;&#x50CF;&#x5904;&#x7406;&#x5E93;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#xFF0C;&#x8FD9;&#x4E2A;&#x5E93;&#x6700;&#x521D;&#x662F;1989&#x5E74;&#x5728;Birkbeck&#x5B66;&#x9662;&#x521B;&#x5EFA;&#x7684;&#xFF0C;&#x76EE;&#x524D;&#x7531;<a href="https://github.com/jcupitt" target="_blank">John Cupitt</a>&#x7EF4;&#x62A4;&#x3002;</p>
-<p>&#x53EA;&#x6709;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x672A;&#x538B;&#x7F29;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5E76;&#x4E00;&#x6B21;&#x5904;&#x7406;&#x4E00;&#x6B21;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528;&#x591A;CPU&#x5185;&#x6838;&#x548C;L1/L2/L3&#x7F13;&#x5B58;&#x3002;</p>
-<p>&#x7531;&#x4E8E;libuv&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x4FDD;&#x6301;&#x975E;&#x963B;&#x585E;&#xFF0C;&#x6CA1;&#x6709;&#x751F;&#x6210;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;promise/async/await&#x3002;</p>
-<h3 id="&#x6548;&#x679C;&#x4F73;">&#x6548;&#x679C;&#x4F73;</h3>
-<p>Huffman&#x8868;&#x5728;&#x751F;&#x6210;JPEG&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x65F6;&#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x5982;<a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a>&#x548C;<a href="http://jpegclub.org/jpegtran/" target="_blank">jpegtran</a>&#x3002;</p>
-<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;PNG&#x6EE4;&#x955C;&#x662F;&#x88AB;&#x7981;&#x7528;&#x7684;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x56FE;&#x8868;&#x548C;&#x7EBF;&#x6761;&#x827A;&#x672F;&#x901A;&#x5E38;&#x4EA7;&#x751F;&#x4E0E;<a href="https://pmt.sourceforge.io/pngcrush/" target="_blank">pngcrush</a>&#x76F8;&#x540C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
-<h3 id="&#x8D21;&#x732E;">&#x8D21;&#x732E;</h3>
-<p><a href="https://github.com/lovell/sharp/blob/master/CONTRIBUTING.md" target="_blank">&#x8D21;&#x732E;&#x8005;&#x6307;&#x5357;</a>&#x6DB5;&#x76D6;&#x4E86;&#x62A5;&#x544A;bug&#x3001;&#x8BF7;&#x6C42;&#x7279;&#x6027;&#x548C;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x66F4;&#x6539;&#x7684;&#x77E5;&#x9053;&#x3002;</p>
-<h3 id="&#x8D21;&#x732E;&#x4EBA;&#x5458;">&#x8D21;&#x732E;&#x4EBA;&#x5458;</h3>
-<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EE5;&#x4E0B;&#x4EBA;&#x5458;&#x7684;&#x5E2E;&#x52A9;&#x548C;&#x4EE3;&#x7801;&#x8D21;&#x732E;&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x5C31;&#x4E0D;&#x53EF;&#x80FD;&#x5B9E;&#x73B0;:</p>
+                                <h2 id="sharp">sharp</h2>
+<blockquote>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x4EE5;&#x4E0B;&#x6240;&#x6709;number&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x6574;&#x578B;</p>
+</blockquote>
+<p>sharp(input | options | &#x65E0;&#x53C2;&#x6570;);</p>
 <ul>
-<li><a href="https://github.com/jcupitt" target="_blank">John Cupitt</a></li>
-<li><a href="https://github.com/pierreinglebert" target="_blank">Pierre Inglebert</a></li>
-<li><a href="https://github.com/jonathanong" target="_blank">Jonathan Ong</a></li>
-<li><a href="https://github.com/chanon" target="_blank">Chanon Sajjamanochai</a></li>
-<li><a href="https://github.com/julianojulio" target="_blank">Juliano Julio</a></li>
-<li><a href="https://github.com/gasi" target="_blank">Daniel Gasienica</a></li>
-<li><a href="https://github.com/julianwa" target="_blank">Julian Walker</a></li>
-<li><a href="https://github.com/apitaru" target="_blank">Amit Pitaru</a></li>
-<li><a href="https://github.com/brandonaaron" target="_blank">Brandon Aaron</a></li>
-<li><a href="https://github.com/papandreou" target="_blank">Andreas Lind</a></li>
-<li><a href="https://github.com/mcuelenaere" target="_blank">Maurus Cuelenaere</a></li>
-<li><a href="https://github.com/LinusU" target="_blank">Linus Unneb&#xE4;ck</a></li>
-<li><a href="https://github.com/mvictoras" target="_blank">Victor Mateevitsi</a></li>
+<li><p>input<code>Buffer | String</code> &#x53EF;&#x4EE5;&#x662F;&#x5305;&#x542B;JPEG&#x3001;PNG&#x3001;WebP&#x3001;GIF&#x3001;SVG&#x3001;TIFF&#x6216;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x7684;Buffer&#xFF0C;&#x6216;&#x5305;&#x542B;JPEG&#x3001;PNG&#x3001;WebP&#x3001;GIF&#x3001;SVG&#x6216;TIFF&#x56FE;&#x50CF;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+</li>
+<li><p>options<code>Object</code> &#x662F;&#x5177;&#x6709;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li>failOnError<code>Boolean</code> &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x7528;&#x201C;&#x6700;&#x4F73;&#x80FD;&#x529B;&#x201D;&#x6765;&#x89E3;&#x7801;&#x56FE;&#x50CF;&#xFF0C;&#x5373;&#x4F7F;&#x6570;&#x636E;&#x635F;&#x574F;&#x6216;&#x65E0;&#x6548;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5B81;&#x613F;&#x505C;&#x6B62;&#x5904;&#x7406;&#x5E76;&#x5728;&#x52A0;&#x8F7D;&#x65E0;&#x6548;&#x56FE;&#x50CF;&#x65F6;&#x5F15;&#x53D1;&#x9519;&#x8BEF;&#xFF0C;&#x5219;&#x5C06;&#x6B64;&#x6807;&#x5FD7;&#x8BBE;&#x7F6E;&#x4E3A;true&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;false)</li>
+<li>density<code>Number</code> &#x5411;&#x91CF;&#x56FE;&#x50CF;&#x7684;DPI&#x7684;&#x6570;&#x5B57;&#x3002; (&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#xFF1A;72)</li>
+<li>page<code>Number</code> &#x63D0;&#x53D6;&#x591A;&#x9875;&#x8F93;&#x5165;&#x7684;&#x9875;&#x7801;(GIF&#x3001;TIFF) (&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;0)</li>
+<li>raw<code>Object</code> &#x63CF;&#x8FF0;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x3002;&#x6709;&#x5173;&#x50CF;&#x7D20;&#x6392;&#x5E8F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;<code>raw()</code>&#x3002;<ul>
+<li>width<code>Number</code></li>
+<li>height<code>Number</code></li>
+<li>channels<code>Number</code>  1-4</li>
 </ul>
-<p>&#x66F4;&#x591A;&#x8BF7;&#x89C1;&#xFF1A;<a href="http://sharp.pixelplumbing.com/en/stable/#credits" target="_blank">sharp credicts</a></p>
-<p>&#x611F;&#x8C22;&#xFF01;</p>
-<h3 id="&#x8BB8;&#x53EF;">&#x8BB8;&#x53EF;</h3>
-<p>Copyright 2013, 2014, 2015, 2016, 2017, 2018 Lovell Fuller and contributors.</p>
-<p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+</li>
+<li>create <code>Object</code> &#x63CF;&#x8FF0;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x65B0;&#x56FE;&#x50CF;&#x3002;<ul>
+<li>width<code>Number</code></li>
+<li>height <code>Number</code></li>
+<li>channels <code>Number</code> 1-4</li>
+<li>background <code>String | Object</code> &#x7531;&#x989C;&#x8272;&#x6A21;&#x5757;&#x89E3;&#x6790;&#x4EE5;&#x63D0;&#x53D6;&#x7EA2;&#x8272;&#x3001;&#x7EFF;&#x8272;&#x3001;&#x84DD;&#x8272;&#x548C;alpha&#x503C;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-javascript">    <span class="hljs-comment">// 1</span>
+    <span class="hljs-keyword">var</span> sharp1 = sharp(<span class="hljs-string">&apos;input.jpg&apos;</span>)
+
+    <span class="hljs-comment">//2</span>
+    <span class="hljs-keyword">var</span> sharp2 = sharp({
+        create: {
+            width: <span class="hljs-number">300</span>,
+            height: <span class="hljs-number">200</span>,
+            channels: <span class="hljs-number">4</span>,
+            background: { r: <span class="hljs-number">255</span>, g: <span class="hljs-number">0</span>, b: <span class="hljs-number">0</span>, alpha: <span class="hljs-number">0.5</span> }
+        }
+    })
+</code></pre>
+<p>&#x65E0;&#x6548;&#x53C2;&#x6570;&#x65F6;&#x629B;&#x51FA;&#x9519;&#x8BEF;</p>
+<p>&#x8FD4;&#x56DE;&#x503C; sharp&#x5B9E;&#x4F8B;</p>
+<h2 id="format">format</h2>
+<p>&#x5305;&#x542B;&#x8868;&#x793A;&#x53EF;&#x7528;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x683C;&#x5F0F;/&#x65B9;&#x6CD5;&#x7684;&#x5D4C;&#x5957;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x5BF9;&#x8C61;</p>
+<p>&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(sharp.format);
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x503C; Object</p>
+<h2 id="versions">versions</h2>
+<p>&#x5305;&#x542B;libvip&#x7248;&#x672C;&#x53F7;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(sharp.versions);
+</code></pre>
+<h2 id="queue">queue</h2>
+<p>&#x4E00;&#x4E2A;EventEmitter&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6709;&#x5982;&#x4E0B;&#x60C5;&#x5F62;&#x65F6;&#x53D1;&#x51FA;&#x901A;&#x77E5;&#xFF1A;</p>
+<ul>
+<li>&#x6392;&#x961F;&#xFF0C;&#x7B49;&#x5F85;libuv&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;</li>
+<li>&#x5B8C;&#x6210;</li>
+</ul>
+<p>&#x6817;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js">sharp.queue.on(<span class="hljs-string">&apos;change&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">queueLength</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Queue contains &apos;</span> + queueLength + <span class="hljs-string">&apos; task(s)&apos;</span>);
+});
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x503C; Object</p>
 
                                 
                                 </section>
@@ -534,12 +556,8 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="charp1.html#格式多" class="navigation navigation-next " aria-label="Next page: 格式多">
+                <a href="charp3.1.html#sharp" class="navigation navigation-next navigation-unique" aria-label="Next page: sharp">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -550,7 +568,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sharp","level":"1.2","depth":1,"next":{"title":"格式多","level":"1.2.1","depth":2,"anchor":"#格式多","path":"article/charp1.md","ref":"./article/charp1.md#格式多","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp1.md","mtime":"2018-11-19T07:47:39.587Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T07:19:16.072Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"构造器","level":"1.4.1","depth":2,"next":{"title":"sharp","level":"1.4.1.1","depth":3,"anchor":"#sharp","path":"article/charp3.1.md","ref":"./article/charp3.1.md#sharp","articles":[]},"previous":{"title":"API","level":"1.4","depth":1,"ref":"","articles":[{"title":"构造器","level":"1.4.1","depth":2,"path":"article/charp3.1.md","ref":"./article/charp3.1.md","articles":[{"title":"sharp","level":"1.4.1.1","depth":3,"anchor":"#sharp","path":"article/charp3.1.md","ref":"./article/charp3.1.md#sharp","articles":[]},{"title":"format","level":"1.4.1.2","depth":3,"anchor":"#format","path":"article/charp3.1.md","ref":"./article/charp3.1.md#format","articles":[]},{"title":"versions","level":"1.4.1.3","depth":3,"anchor":"#versions","path":"article/charp3.1.md","ref":"./article/charp3.1.md#versions","articles":[]},{"title":"queue","level":"1.4.1.4","depth":3,"anchor":"#queue","path":"article/charp3.1.md","ref":"./article/charp3.1.md#queue","articles":[]}]},{"title":"输入","level":"1.4.2","depth":2,"path":"article/charp3.2.md","ref":"./article/charp3.2.md","articles":[{"title":"clone","level":"1.4.2.1","depth":3,"anchor":"#clone","path":"article/charp3.2.md","ref":"./article/charp3.2.md#clone","articles":[]},{"title":"metadata","level":"1.4.2.2","depth":3,"anchor":"#metadata","path":"article/charp3.2.md","ref":"./article/charp3.2.md#metadata","articles":[]},{"title":"stats","level":"1.4.2.3","depth":3,"anchor":"#stats","path":"article/charp3.2.md","ref":"./article/charp3.2.md#stats","articles":[]},{"title":"limitInputPixels","level":"1.4.2.4","depth":3,"anchor":"#limitinputpixels","path":"article/charp3.2.md","ref":"./article/charp3.2.md#limitinputpixels","articles":[]},{"title":"sequentialRead","level":"1.4.2.5","depth":3,"anchor":"#sequentialread","path":"article/charp3.2.md","ref":"./article/charp3.2.md#sequentialread","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp3.1.md","mtime":"2018-11-19T10:07:45.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T07:19:16.072Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
