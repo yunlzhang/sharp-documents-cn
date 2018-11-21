@@ -26,3 +26,10 @@
         * [stats](./article/charp3.2.md#stats)
         * [limitInputPixels](./article/charp3.2.md#limitinputpixels)
         * [sequentialRead](./article/charp3.2.md#sequentialread)
+
+    * [输出](./article/charp3.3.md);
+        * [toFile](./article/charp3.3.md#toFile)
+        * [toFile](./article/charp3.3.md#toFile)
+        * [toFile](./article/charp3.3.md#toFile)
+        * [toFile](./article/charp3.3.md#toFile)
+        * [toFile](./article/charp3.3.md#toFile)
