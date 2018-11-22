@@ -29,7 +29,12 @@
 
     * [输出](./article/charp3.3.md);
         * [toFile](./article/charp3.3.md#toFile)
-        * [toFile](./article/charp3.3.md#toFile)
-        * [toFile](./article/charp3.3.md#toFile)
-        * [toFile](./article/charp3.3.md#toFile)
-        * [toFile](./article/charp3.3.md#toFile)
+        * [toBuffer](./article/charp3.3.md#toBuffer)
+        * [withMetadata](./article/charp3.3.md#withMetadata)
+        * [jpeg](./article/charp3.3.md#jpeg)
+        * [png](./article/charp3.3.md#png)
+        * [webp](./article/charp3.3.md#webp)
+        * [tiff](./article/charp3.3.md#tiff)
+        * [raw](./article/charp3.3.md#raw)
+        * [toFormat](./article/charp3.3.md#toFormat)
+        * [tile](./article/charp3.3.md#tile)
