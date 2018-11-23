@@ -38,3 +38,9 @@
         * [raw](./article/charp3.3.md#raw)
         * [toFormat](./article/charp3.3.md#toFormat)
         * [tile](./article/charp3.3.md#tile)
+
+    * [调整图像](./article/charp3.4.md)
+        * [resize](./article/charp3.4.md#resize)
+        * [extend](./article/charp3.4.md#extend)
+        * [extract](./article/charp3.4.md#extract)
+        * [trim](./article/charp3.4.md#trim)
