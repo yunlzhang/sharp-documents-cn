@@ -44,3 +44,5 @@
         * [extend](./article/charp3.4.md#extend)
         * [extract](./article/charp3.4.md#extract)
         * [trim](./article/charp3.4.md#trim)
+    * [合成图像](./article/charp3.5.md)
+        * [overlayWith](./article/charp3.5.md#overlayWith)
