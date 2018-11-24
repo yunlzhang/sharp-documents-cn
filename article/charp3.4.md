@@ -40,7 +40,7 @@
     * withoutEnlargement (Boolean) 如果宽度或高度已经小于指定的尺寸，则不要放大，这相当于GraphicsMagick的`>`几何选项。(可选,默认`false`)
     * fastShrinkOnLoad (Boolean) 充分利用JPEG和WebP的收缩加载特性，这可以导致一些图像上出现轻微的波纹图案。(可选,默认`true`)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -115,7 +115,7 @@ sharp(input)
     * right (Number)
     * background (String|Object) 背景颜色，由[color](https://www.npmjs.org/package/color)模块解析，默认为黑色，没有透明度。(可选,默认{0,g: 0, b: 0,α:1})
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -150,7 +150,7 @@ sharp(input)
 * width 提取图像的宽度
 * height 提取图像的高度
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -178,4 +178,4 @@ sharp(input)
 参数
 * threshold (Number) 许与左上角像素的差值，大于零。(可选的,默认10)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例

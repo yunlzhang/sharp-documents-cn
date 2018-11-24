@@ -67,7 +67,7 @@ sharp(input)
 * withMetadata
     * orientation (Number) 介于1和8之间，用于更新EXIF方向标记。
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -97,7 +97,7 @@ sharp('input.jpg')
     * quantizationTable(Number) quantisationTable的替代边写，整数0-8，需要mozjpeg(可选，默认为0)
     * force (Boolean) 强制JPEG输出，否则尝试使用输入格式(可选，默认为true)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -123,7 +123,7 @@ PNG输出总是全色的，每像素8或16位。每像素1、2或4位的索引PN
     * adaptiveFiltering (Boolean) 使用自适应行筛选(可选，默认为false)
     * force (Boolean) 强制PNG输出，否则尝试使用输入格式(可选，默认为true)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -146,7 +146,7 @@ const data = await sharp(input)
     * nearLossless (Boolean) 使用接近无损压缩模式(可选，默认为false)
     * force (Boolean) 强制WebP输出，否则尝试使用输入格式(可选，默认为true)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -171,7 +171,7 @@ const data = await sharp(input)
     * yres (Number) 垂直分辨率(像素/mm)(可选，默认1.0)
     * squash (Boolean) 将8位图像压缩到1位(可选，默认为false)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js

@@ -24,7 +24,7 @@
         * channels
         * background (String|Object) 由[color](https://www.npmjs.org/package/color)模块解析，提取红色、绿色、蓝色和alpha值。
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js

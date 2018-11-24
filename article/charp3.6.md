@@ -16,7 +16,7 @@
 * otions (Object)如果存在，则为具有可选属性的对象。
     * background (String|Object) 由[color](https://www.npmjs.org/package/color)(模块解析，提取红色、绿色、蓝色和alpha值。 可选，默认值为你`#000000`
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -62,7 +62,7 @@ readableStream.pipe(pipeline);
 * flat (Number) 锐化的水平适用于“平坦”地区。(可选,默认1.0)
 * jagged (Number) 锐化水平适用于“锯齿状”区域。(可选,默认2.0)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 
 ### median
@@ -72,7 +72,7 @@ readableStream.pipe(pipeline);
 参数
 * size (Number) 正方形掩码大小:x大小(可选，默认3)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 ### blur
 
@@ -81,7 +81,7 @@ readableStream.pipe(pipeline);
 参数
 * sigma 0.3到1000之间的值表示高斯掩码的 `sigma = 1 + radius / 2`
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 
 ### flatten
@@ -99,7 +99,7 @@ readableStream.pipe(pipeline);
 * gamma 值介于1.0和3.0之间。(可选,默认2.2)
 
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 
 ### negate
@@ -138,7 +138,7 @@ normalise的替代拼写。
     * scale  内核的大小，以像素为单位。(可选,默认的`sum`)
     * offset 内核的偏移量，以像素为单位。(可选,默认0)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 栗子
 ```js
@@ -166,7 +166,7 @@ sharp(input)
     * greyscale (Boolean) 转换为单通道灰度。(可选,默认`true`)
     * grayscale greyscale 的替代拼写
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 
 ### boolean
@@ -184,7 +184,7 @@ sharp(input)
         * height 
         * channels 
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
 
 
 ### linear
@@ -195,4 +195,4 @@ sharp(input)
 * a 乘数(可选，默认1.0)
 * b 偏移量(可选，默认0.0)
 
-参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 正常返回sharp实例
