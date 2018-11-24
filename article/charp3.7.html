@@ -963,9 +963,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="charp3.8.md">
+        <li class="chapter " data-level="1.4.8" data-path="charp3.8.html">
             
-                <span>
+                <a href="charp3.8.html">
             
                     
                     通道操作
@@ -977,9 +977,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.8.1" data-path="charp3.8.md">
+        <li class="chapter " data-level="1.4.8.1" data-path="charp3.8.html">
             
-                <span>
+                <a href="charp3.8.html#removeAlpha">
             
                     
                     removeAlpha
@@ -990,9 +990,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8.2" data-path="charp3.8.md">
+        <li class="chapter " data-level="1.4.8.2" data-path="charp3.8.html">
             
-                <span>
+                <a href="charp3.8.html#extractChannel">
             
                     
                     extractChannel
@@ -1003,9 +1003,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8.3" data-path="charp3.8.md">
+        <li class="chapter " data-level="1.4.8.3" data-path="charp3.8.html">
             
-                <span>
+                <a href="charp3.8.html#joinChannel">
             
                     
                     joinChannel
@@ -1016,9 +1016,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8.4" data-path="charp3.8.md">
+        <li class="chapter " data-level="1.4.8.4" data-path="charp3.8.html">
             
-                <span>
+                <a href="charp3.8.html#bandbool">
             
                     
                     bandbool
@@ -1034,9 +1034,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="charp3.9.md">
+        <li class="chapter " data-level="1.4.9" data-path="charp3.9.html">
             
-                <span>
+                <a href="charp3.9.html">
             
                     
                     工具集
@@ -1048,9 +1048,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.9.1" data-path="charp3.9.md">
+        <li class="chapter " data-level="1.4.9.1" data-path="charp3.9.html">
             
-                <span>
+                <a href="charp3.9.html#cache">
             
                     
                     cache
@@ -1061,9 +1061,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9.2" data-path="charp3.9.md">
+        <li class="chapter " data-level="1.4.9.2" data-path="charp3.9.html">
             
-                <span>
+                <a href="charp3.9.html#concurrency">
             
                     
                     concurrency
@@ -1074,9 +1074,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9.3" data-path="charp3.9.md">
+        <li class="chapter " data-level="1.4.9.3" data-path="charp3.9.html">
             
-                <span>
+                <a href="charp3.9.html#counters">
             
                     
                     counters
@@ -1087,9 +1087,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9.4" data-path="charp3.9.md">
+        <li class="chapter " data-level="1.4.9.4" data-path="charp3.9.html">
             
-                <span>
+                <a href="charp3.9.html#simd">
             
                     
                     simd
@@ -1181,7 +1181,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h3 id="tint">tint</h3>
+<p>&#x4F7F;&#x7528;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8272;&#x5EA6;&#x5BF9;&#x56FE;&#x50CF;&#x7740;&#x8272;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x6301;&#x56FE;&#x50CF;&#x4EAE;&#x5EA6;&#x3002;alpha&#x901A;&#x9053;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x56E0;&#x64CD;&#x4F5C;&#x800C;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>rgb(String|Object) &#x7531;&#x989C;&#x8272;&#x6A21;&#x5757;&#x89E3;&#x6790;&#x4EE5;&#x63D0;&#x53D6;&#x8272;&#x5EA6;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x6B63;&#x5E38;&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="greyscale">greyscale</h3>
+<p>&#x8F6C;&#x6362;&#x4E3A;8&#x4F4D;&#x7070;&#x5EA6;;256&#x5EA6;&#x7070;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x8FD0;&#x7B97;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x975E;&#x7EBF;&#x6027;&#x7684;&#x989C;&#x8272;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;sRGB&#xFF0C;&#x548C;<code>gamma</code>&#x65B9;&#x6CD5;&#x4E00;&#x5757;&#x4F7F;&#x7528;&#x4EE5;&#x83B7;&#x5F97;&#x66F4;&#x597D;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x5C06;&#x662F;web&#x53CB;&#x597D;&#x7684;sRGB&#xFF0C;&#x5E76;&#x5305;&#x542B;&#x4E09;&#x4E2A;(&#x76F8;&#x540C;&#x7684;)&#x989C;&#x8272;&#x901A;&#x9053;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x88AB;&#x5176;&#x4ED6;&#x9510;&#x5316;&#x64CD;&#x4F5C;&#x8986;&#x76D6;&#xFF0C;&#x4F8B;&#x5982;<code>toColourspace(&apos;b-w&apos;)</code>&#xFF0C;&#x5B83;&#x5C06;&#x751F;&#x6210;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x901A;&#x9053;&#x7684;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x3002;alpha&#x901A;&#x9053;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x56E0;&#x64CD;&#x4F5C;&#x800C;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>greyscale (Boolean) &#x53EF;&#x9009;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>true</code></li>
+</ul>
+<p>&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="grayscale">grayscale</h3>
+<p>greyscale&#x7684;&#x66FF;&#x4EE3;&#x62FC;&#x5199;</p>
+<h3 id="tocolourspace">toColourspace</h3>
+<p>&#x8BBE;&#x7F6E;&#x8F93;&#x51FA;colourspace&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x5C06;&#x662F;web&#x53CB;&#x597D;&#x7684;sRGB&#xFF0C;&#x5176;&#x4ED6;&#x901A;&#x9053;&#x89E3;&#x91CA;&#x4E3A;alpha&#x901A;&#x9053;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>colorspace (String) &#x8F93;&#x51FA;&#x989C;&#x8272;&#x7A7A;&#x95F4; &#x4F8B;&#x5982;<code>srgb,rgb,cmyk,lab,b-w</code>&#x7B49;&#x7B49;</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x6B63;&#x5E38;&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="tocolorspace">toColorspace</h3>
+<p><code>toColourspace</code>&#x7684;&#x66FF;&#x4EE3;&#x62FC;&#x5199;</p>
+
                                 
                                 </section>
                             
@@ -1224,7 +1249,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"色彩处理","level":"1.4.7","depth":2,"next":{"title":"tint","level":"1.4.7.1","depth":3,"anchor":"#tint","path":"article/charp3.7.md","ref":"./article/charp3.7.md#tint","articles":[]},"previous":{"title":"linear","level":"1.4.6.15","depth":3,"anchor":"#linear","path":"article/charp3.6.md","ref":"./article/charp3.6.md#linear","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp3.7.md","mtime":"2018-11-24T04:52:24.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T04:31:23.438Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"色彩处理","level":"1.4.7","depth":2,"next":{"title":"tint","level":"1.4.7.1","depth":3,"anchor":"#tint","path":"article/charp3.7.md","ref":"./article/charp3.7.md#tint","articles":[]},"previous":{"title":"linear","level":"1.4.6.15","depth":3,"anchor":"#linear","path":"article/charp3.6.md","ref":"./article/charp3.6.md#linear","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp3.7.md","mtime":"2018-11-24T11:32:00.856Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T04:31:23.438Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
