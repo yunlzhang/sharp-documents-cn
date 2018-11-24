@@ -38,7 +38,7 @@ Huffman表在生成JPEG输出图像时进行了优化，而无需使用单独的
 
 ### 贡献
 
-[贡献者指南](https://github.com/lovell/sharp/blob/master/CONTRIBUTING.md)涵盖了报告bug、请求特性和提交代码更改的知道。
+[贡献者指南](https://github.com/lovell/sharp/blob/master/CONTRIBUTING.md)涵盖了报告bug、请求特性和提交代码更改的指导。
 
 
 ### 贡献人员
