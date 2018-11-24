@@ -24,23 +24,23 @@
         * channels
         * background (String|Object) 由[color](https://www.npmjs.org/package/color)模块解析，提取红色、绿色、蓝色和alpha值。
 
-    参数不正确抛出异常 返回sharp实例
+参数不正确抛出异常 返回sharp实例
 
-    栗子
-    ```js
-    sharp('input.png')
-        .rotate(180)
-        .resize(300)
-        .flatten()
-        .background('#ff6600')
-        .overlayWith('overlay.png', { gravity: sharp.gravity.southeast } )
-        .sharpen()
-        .withMetadata()
-        .webp( { quality: 90 } )
-        .toBuffer()
-        .then(function(outputBuffer) {
-            // outputBuffer contains upside down, 300px wide, alpha channel flattened
-            // onto orange background, composited with overlay.png with SE gravity,
-            // sharpened, with metadata, 90% quality WebP image data. Phew!
-        });
-    ```
+栗子
+```js
+sharp('input.png')
+    .rotate(180)
+    .resize(300)
+    .flatten()
+    .background('#ff6600')
+    .overlayWith('overlay.png', { gravity: sharp.gravity.southeast } )
+    .sharpen()
+    .withMetadata()
+    .webp( { quality: 90 } )
+    .toBuffer()
+    .then(function(outputBuffer) {
+        // outputBuffer contains upside down, 300px wide, alpha channel flattened
+        // onto orange background, composited with overlay.png with SE gravity,
+        // sharpened, with metadata, 90% quality WebP image data. Phew!
+    });
+```

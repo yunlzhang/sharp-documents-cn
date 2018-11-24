@@ -10,7 +10,7 @@
 
 大多数运行着node(node版本：6、8、10)的64位OS X、Windows和Linux系统都不需要额外的安装或运行依赖。
 
-### 格式多
+### 格式
 
 这个模块支持读取JPEG、PNG、WebP、TIFF、GIF和SVG格式图片 
 

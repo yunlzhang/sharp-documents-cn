@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>构造器 · GitBook</title>
+        <title>图像操作 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="charp3.1.html" />
+    <link rel="next" href="charp3.6.html" />
     
+    
+    <link rel="prev" href="charp3.5.html" />
     
 
     </head>
@@ -256,7 +258,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="charp3.1.html">
+        <li class="chapter " data-level="1.4.1" data-path="charp3.1.html">
             
                 <a href="charp3.1.html">
             
@@ -663,7 +665,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="charp3.6.html">
+        <li class="chapter active" data-level="1.4.6" data-path="charp3.6.html">
             
                 <a href="charp3.6.html">
             
@@ -1164,7 +1166,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >构造器</a>
+        <a href=".." >图像操作</a>
     </h1>
 </div>
 
@@ -1179,74 +1181,161 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="sharp">sharp</h2>
-<blockquote>
-<p>&#x5907;&#x6CE8;&#xFF1A;&#x4EE5;&#x4E0B;&#x6240;&#x6709;number&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x6574;&#x578B;</p>
-</blockquote>
-<p>sharp(input | options | &#x65E0;&#x53C2;&#x6570;);</p>
+                                <h3 id="rotate">rotate</h3>
+<p>&#x65CB;&#x8F6C;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x7684;&#x663E;&#x5F0F;&#x89D2;&#x5EA6;&#x6216;&#x81EA;&#x52A8;&#x5B9A;&#x5411;&#x7684;&#x57FA;&#x7840;&#x4E0A;EXIF&#x7684;<code>Orientation</code>&#x6807;&#x7B7E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x6709;&#x6548;&#x7684;&#x6B63;&#x65CB;&#x8F6C;&#x5EA6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;-450&#x4F1A;&#x4EA7;&#x751F;270&#x5EA6;&#x7684;&#x65CB;&#x8F6C;&#x3002;</p>
+<p>&#x5F53;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x4E0D;&#x662F;90&#x7684;&#x500D;&#x6570;&#x65F6;&#xFF0C;&#x80CC;&#x666F;&#x989C;&#x8272;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;<code>background</code>&#x9009;&#x9879;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x89D2;&#x5EA6;&#xFF0C;&#x5219;&#x7531;EXIF&#x6570;&#x636E;&#x786E;&#x5B9A;&#x3002;&#x652F;&#x6301;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x63A8;&#x65AD;&#x7FFB;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>rotate</code>&#x610F;&#x5473;&#x7740;&#x5220;&#x9664;EXIF<code>Orientation</code>&#x6807;&#x8BB0;(&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;)&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x987A;&#x5E8F;&#x5728;&#x65CB;&#x8F6C;&#x548C;&#x63D0;&#x53D6;&#x533A;&#x57DF;&#x65F6;&#x90FD;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;<code>rotate(x).extract(y)</code>&#x4E0E;<code>extract(y).rotate(x)</code>&#x4F1A;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
 <ul>
-<li><p>input<code>Buffer | String</code> &#x53EF;&#x4EE5;&#x662F;&#x5305;&#x542B;JPEG&#x3001;PNG&#x3001;WebP&#x3001;GIF&#x3001;SVG&#x3001;TIFF&#x6216;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x7684;Buffer&#xFF0C;&#x6216;&#x5305;&#x542B;JPEG&#x3001;PNG&#x3001;WebP&#x3001;GIF&#x3001;SVG&#x6216;TIFF&#x56FE;&#x50CF;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<li>angle (Number) &#x65CB;&#x8F6C;&#x7684;&#x89D2;&#x5EA6;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;<code>auto</code>)</li>
+<li>otions (Object)&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x5177;&#x6709;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002;<ul>
+<li>background (String|Object) &#x7531;<a href="https://www.npmjs.org/package/color" target="_blank">color</a>(&#x6A21;&#x5757;&#x89E3;&#x6790;&#xFF0C;&#x63D0;&#x53D6;&#x7EA2;&#x8272;&#x3001;&#x7EFF;&#x8272;&#x3001;&#x84DD;&#x8272;&#x548C;alpha&#x503C;&#x3002; &#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x4F60;<code>#000000</code></li>
+</ul>
 </li>
-<li><p>options<code>Object</code> &#x662F;&#x5177;&#x6709;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<p>&#x6817;&#x5B50;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> pipeline = sharp()
+  .rotate()
+  .resize(<span class="hljs-literal">null</span>, <span class="hljs-number">200</span>)
+  .toBuffer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, outputBuffer, info</span>) </span>{
+    <span class="hljs-comment">// outputBuffer contains 200px high JPEG image data,</span>
+    <span class="hljs-comment">// auto-rotated using EXIF Orientation tag</span>
+    <span class="hljs-comment">// info.width and info.height contain the dimensions of the resized image</span>
+  });
+readableStream.pipe(pipeline);
+</code></pre>
+<h3 id="flip">flip</h3>
+<p>&#x5C06;&#x56FE;&#x50CF;&#x6CBF;&#x5782;&#x76F4;Y&#x8F74;&#x7FFB;&#x8F6C;&#x3002;&#x8FD9;&#x603B;&#x662F;&#x5728;&#x65CB;&#x8F6C;&#x4E4B;&#x540E;&#x53D1;&#x751F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;flip&#x7684;&#x4F7F;&#x7528;&#x610F;&#x5473;&#x7740;&#x53BB;&#x6389;EXIF<code>Orientation</code>&#x6807;&#x7B7E;(&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;)&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
 <ul>
-<li>failOnError<code>Boolean</code> &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x7528;&#x201C;&#x6700;&#x4F73;&#x80FD;&#x529B;&#x201D;&#x6765;&#x89E3;&#x7801;&#x56FE;&#x50CF;&#xFF0C;&#x5373;&#x4F7F;&#x6570;&#x636E;&#x635F;&#x574F;&#x6216;&#x65E0;&#x6548;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5B81;&#x613F;&#x505C;&#x6B62;&#x5904;&#x7406;&#x5E76;&#x5728;&#x52A0;&#x8F7D;&#x65E0;&#x6548;&#x56FE;&#x50CF;&#x65F6;&#x5F15;&#x53D1;&#x9519;&#x8BEF;&#xFF0C;&#x5219;&#x5C06;&#x6B64;&#x6807;&#x5FD7;&#x8BBE;&#x7F6E;&#x4E3A;true&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;false)</li>
-<li>density<code>Number</code> &#x5411;&#x91CF;&#x56FE;&#x50CF;&#x7684;DPI&#x7684;&#x6570;&#x5B57;&#x3002; (&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#xFF1A;72)</li>
-<li>page<code>Number</code> &#x63D0;&#x53D6;&#x591A;&#x9875;&#x8F93;&#x5165;&#x7684;&#x9875;&#x7801;(GIF&#x3001;TIFF) (&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;0)</li>
-<li>raw<code>Object</code> &#x63CF;&#x8FF0;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x3002;&#x6709;&#x5173;&#x50CF;&#x7D20;&#x6392;&#x5E8F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;<code>raw()</code>&#x3002;<ul>
-<li>width<code>Number</code></li>
-<li>height<code>Number</code></li>
-<li>channels<code>Number</code>  1-4</li>
+<li>flip (Boolean) &#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>true</code></li>
 </ul>
-</li>
-<li>create <code>Object</code> &#x63CF;&#x8FF0;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x65B0;&#x56FE;&#x50CF;&#x3002;<ul>
-<li>width<code>Number</code></li>
-<li>height <code>Number</code></li>
-<li>channels <code>Number</code> 1-4</li>
-<li>background <code>String | Object</code> &#x7531;&#x989C;&#x8272;&#x6A21;&#x5757;&#x89E3;&#x6790;&#x4EE5;&#x63D0;&#x53D6;&#x7EA2;&#x8272;&#x3001;&#x7EFF;&#x8272;&#x3001;&#x84DD;&#x8272;&#x548C;alpha&#x503C;&#x3002;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>&#x6817;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-javascript">    <span class="hljs-comment">// 1</span>
-    <span class="hljs-keyword">var</span> sharp1 = sharp(<span class="hljs-string">&apos;input.jpg&apos;</span>)
-
-    <span class="hljs-comment">//2</span>
-    <span class="hljs-keyword">var</span> sharp2 = sharp({
-        create: {
-            width: <span class="hljs-number">300</span>,
-            height: <span class="hljs-number">200</span>,
-            channels: <span class="hljs-number">4</span>,
-            background: { r: <span class="hljs-number">255</span>, g: <span class="hljs-number">0</span>, b: <span class="hljs-number">0</span>, alpha: <span class="hljs-number">0.5</span> }
-        }
-    })
-</code></pre>
-<p>&#x65E0;&#x6548;&#x53C2;&#x6570;&#x65F6;&#x629B;&#x51FA;&#x9519;&#x8BEF;</p>
-<p>&#x8FD4;&#x56DE;&#x503C; sharp&#x5B9E;&#x4F8B;</p>
-<h2 id="format">format</h2>
-<p>&#x5305;&#x542B;&#x8868;&#x793A;&#x53EF;&#x7528;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x683C;&#x5F0F;/&#x65B9;&#x6CD5;&#x7684;&#x5D4C;&#x5957;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x5BF9;&#x8C61;</p>
-<p>&#x6817;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(sharp.format);
-</code></pre>
-<p>&#x8FD4;&#x56DE;&#x503C; Object</p>
-<h2 id="versions">versions</h2>
-<p>&#x5305;&#x542B;libvip&#x7248;&#x672C;&#x53F7;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
-<p>&#x6817;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(sharp.versions);
-</code></pre>
-<h2 id="queue">queue</h2>
-<p>&#x4E00;&#x4E2A;EventEmitter&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6709;&#x5982;&#x4E0B;&#x60C5;&#x5F62;&#x65F6;&#x53D1;&#x51FA;&#x901A;&#x77E5;&#xFF1A;</p>
+<p>&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="flop">flop</h3>
+<p>&#x5C06;&#x56FE;&#x50CF;&#x6CBF;&#x6C34;&#x5E73;X&#x8F74;&#x7FFB;&#x8F6C;&#x3002;&#x8FD9;&#x603B;&#x662F;&#x5728;&#x65CB;&#x8F6C;&#x4E4B;&#x540E;&#x53D1;&#x751F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;&#x89E6;&#x53D1;&#x5668;&#x7684;&#x4F7F;&#x7528;&#x610F;&#x5473;&#x7740;&#x5220;&#x9664;EXIF<code>Orientation</code>&#x6807;&#x8BB0;(&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;)&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
 <ul>
-<li>&#x6392;&#x961F;&#xFF0C;&#x7B49;&#x5F85;libuv&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;</li>
-<li>&#x5B8C;&#x6210;</li>
+<li>flop (Boolean) &#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>true</code></li>
 </ul>
-<p>&#x6817;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-js">sharp.queue.on(<span class="hljs-string">&apos;change&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">queueLength</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Queue contains &apos;</span> + queueLength + <span class="hljs-string">&apos; task(s)&apos;</span>);
-});
+<p>&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="sharpen">sharpen</h3>
+<p>&#x9510;&#x5316;&#x56FE;&#x50CF;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x5FEB;&#x901F;&#xFF0C;&#x6E29;&#x548C;&#x7684;&#x9510;&#x5316;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x3002;&#x5F53;&#x63D0;&#x4F9B;<code>sigma</code>&#x65F6;&#xFF0C;&#x5728;&#x5B9E;&#x9A8C;&#x5BA4;&#x8272;&#x5F69;&#x7A7A;&#x95F4;&#x4E2D;&#x5BF9;L&#x901A;&#x9053;&#x8FDB;&#x884C;&#x66F4;&#x6162;&#x3001;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x9510;&#x5316;&#x3002;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x63A7;&#x5236;&#x201C;&#x5E73;&#x201D;&#x548C;&#x201C;&#x952F;&#x9F7F;&#x201D;&#x533A;&#x57DF;&#x7684;&#x9510;&#x5316;&#x6C34;&#x5E73;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>sigama (Number)  &#x9AD8;&#x65AF;&#x6A21;&#x7CCA;<code>sigama</code>&#x53C2;&#x6570;&#x503C;  <code>sigma = 1 + radius / 2</code></li>
+<li>flat (Number) &#x9510;&#x5316;&#x7684;&#x6C34;&#x5E73;&#x9002;&#x7528;&#x4E8E;&#x201C;&#x5E73;&#x5766;&#x201D;&#x5730;&#x533A;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;1.0)</li>
+<li>jagged (Number) &#x9510;&#x5316;&#x6C34;&#x5E73;&#x9002;&#x7528;&#x4E8E;&#x201C;&#x952F;&#x9F7F;&#x72B6;&#x201D;&#x533A;&#x57DF;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;2.0)</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="median">median</h3>
+<p>&#x8FD0;&#x7528;&#x4E2D;&#x503C;&#x6EE4;&#x6CE2;&#x3002;&#x5728;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7A97;&#x53E3;&#x662F;3x3&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>size (Number) &#x6B63;&#x65B9;&#x5F62;&#x63A9;&#x7801;&#x5927;&#x5C0F;:x&#x5927;&#x5C0F;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;3)</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="blur">blur</h3>
+<p>&#x6A21;&#x7CCA;&#x56FE;&#x50CF;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x5FEB;&#x901F;&#xFF0C;&#x6E29;&#x548C;&#x7684;&#x6A21;&#x7CCA;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x3002;&#x5F53;&#x63D0;&#x4F9B;<code>sigma</code>&#x65F6;&#xFF0C;&#x6267;&#x884C;&#x66F4;&#x6162;&#x3001;&#x66F4;&#x51C6;&#x786E;&#x7684;&#x9AD8;&#x65AF;&#x6A21;&#x7CCA;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>sigma 0.3&#x5230;1000&#x4E4B;&#x95F4;&#x7684;&#x503C;&#x8868;&#x793A;&#x9AD8;&#x65AF;&#x63A9;&#x7801;&#x7684; <code>sigma = 1 + radius / 2</code></li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="flatten">flatten</h3>
+<p>&#x5408;&#x5E76;alpha&#x900F;&#x660E;&#x901A;&#x9053;(&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;)&#x548C;&#x80CC;&#x666F;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;sharp &#x5B9E;&#x4F8B;</p>
+<h3 id="gamma">gamma</h3>
+<p>&#x901A;&#x8FC7;&#x5C06;&#x7F16;&#x7801;(&#x53D8;&#x6697;)&#x9884;&#x8C03;&#x6574;&#x4E3A;<code>1/gamma</code>&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x7F16;&#x7801;(&#x53D8;&#x4EAE;)&#x540E;&#x8C03;&#x6574;&#x4E3A;<code>1/gamma</code>&#xFF0C;&#x5E94;&#x7528;&#x4F3D;&#x9A6C;&#x6821;&#x6B63;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x975E;&#x7EBF;&#x6027;&#x8272;&#x5F69;&#x7A7A;&#x95F4;&#x4E2D;&#x88AB;&#x7F29;&#x653E;&#x56FE;&#x50CF;&#x7684;&#x611F;&#x77E5;&#x4EAE;&#x5EA6;&#x3002;&#x5F53;&#x5E94;&#x7528;&#x4F3D;&#x9A6C;&#x6821;&#x6B63;&#x65F6;&#xFF0C;JPEG&#x548C;WebP&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x4E0D;&#x4F1A;&#x5229;&#x7528;&#x52A0;&#x8F7D;&#x6536;&#x7F29;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>gamma &#x503C;&#x4ECB;&#x4E8E;1.0&#x548C;3.0&#x4E4B;&#x95F4;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;2.2)</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="negate">negate</h3>
+<p>&#x4EA7;&#x751F;&#x8D1F;&#x7247;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>negate (Boolean) &#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>true</code></li>
+</ul>
+<p>&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="normalise">normalise</h3>
+<p>&#x901A;&#x8FC7;&#x62C9;&#x4F38;&#x4EAE;&#x5EA6;&#x6765;&#x8986;&#x76D6;&#x6574;&#x4E2A;&#x52A8;&#x6001;&#x8303;&#x56F4;&#x6765;&#x589E;&#x5F3A;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x7684;&#x5BF9;&#x6BD4;&#x5EA6;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>normalise (Boolean) &#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>true</code></li>
+</ul>
+<p>&#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="normalize">normalize</h3>
+<p>normalise&#x7684;&#x66FF;&#x4EE3;&#x62FC;&#x5199;&#x3002;</p>
+<h3 id="convolve">convolve</h3>
+<p>&#x5C06;&#x56FE;&#x50CF;&#x4E0E;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x6838;&#x5377;&#x79EF;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>kernel<ul>
+<li>width  &#x5185;&#x6838;&#x7684;&#x5BBD;&#x5EA6;(&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;)&#x3002;</li>
+<li>height &#x5185;&#x6838;&#x7684;&#x9AD8;&#x5EA6;(&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;)&#x3002;</li>
+<li>kernel &#x5185;&#x6838;&#x503C;&#x5305;&#x542B;<code>width*height</code>&#x7684;&#x6570;&#x7EC4;</li>
+<li>scale  &#x5185;&#x6838;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;&#x7684;<code>sum</code>)</li>
+<li>offset &#x5185;&#x6838;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;0)</li>
+</ul>
+</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<p>&#x6817;&#x5B50;</p>
+<pre><code class="lang-js">sharp(input)
+  .convolve({
+    width: <span class="hljs-number">3</span>,
+    height: <span class="hljs-number">3</span>,
+    kernel: [<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
+  })
+  .raw()
+  .toBuffer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, data, info</span>) </span>{
+    <span class="hljs-comment">// data contains the raw pixel data representing the convolution</span>
+    <span class="hljs-comment">// of the input image with the horizontal Sobel operator</span>
+  });
 </code></pre>
-<p>&#x8FD4;&#x56DE;&#x503C; Object</p>
+<h3 id="threshold">threshold</h3>
+<p>&#x4EFB;&#x4F55;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x9608;&#x503C;&#x7684;&#x50CF;&#x7D20;&#x503C;&#x5C06;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;255&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;0&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>threshold &#xFF08;Number) 0-255&#x8303;&#x56F4;&#x5185;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x5E94;&#x7528;&#x9608;&#x503C;&#x7684;&#x7EA7;&#x522B;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;128)</li>
+<li>options<ul>
+<li>greyscale (Boolean) &#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x901A;&#x9053;&#x7070;&#x5EA6;&#x3002;(&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;<code>true</code>)</li>
+<li>grayscale greyscale &#x7684;&#x66FF;&#x4EE3;&#x62FC;&#x5199;</li>
+</ul>
+</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="boolean">boolean</h3>
+<p>&#x5BF9;&#x64CD;&#x4F5C;&#x6570;&#x6620;&#x50CF;&#x6267;&#x884C;&#x4F4D;&#x5E03;&#x5C14;&#x64CD;&#x4F5C;</p>
+<p>&#x8BE5;&#x64CD;&#x4F5C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x662F;&#x5728;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x7684;&#x76F8;&#x5E94;&#x50CF;&#x7D20;&#x4E4B;&#x95F4;&#x9009;&#x62E9;&#x7684;&#x9010;&#x4F4D;&#x5E03;&#x5C14;&#x64CD;&#x4F5C;<code>operate</code>&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>operand (Buffer | String) &#x5305;&#x542B;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x6216;&#x5305;&#x542B;&#x56FE;&#x50CF;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>operator (String) <code>and&#x3001;or&#x3001;eor</code> &#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x50CF;C&#x8BED;&#x8A00;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&amp;,|,^&#x3002;</li>
+<li>options<ul>
+<li>raw &#x63CF;&#x8FF0;&#x5728;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x50CF;&#x7D20;&#x6570;&#x636E;&#x65F6;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x3002;<ul>
+<li>width</li>
+<li>height </li>
+<li>channels </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
+<h3 id="linear">linear</h3>
+<p>&#x5BF9;&#x56FE;&#x50CF;&#x5E94;&#x7528;&#x7EBF;&#x6027;&#x516C;&#x5F0F;a * input + b (level adjustment)</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>a &#x4E58;&#x6570;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;1.0)</li>
+<li>b &#x504F;&#x79FB;&#x91CF;(&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;0.0)</li>
+</ul>
+<p>&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;&#x629B;&#x51FA;&#x5F02;&#x5E38; &#x8FD4;&#x56DE;sharp&#x5B9E;&#x4F8B;</p>
 
                                 
                                 </section>
@@ -1274,8 +1363,12 @@
 
             
                 
+                <a href="charp3.5.html#overlayWith" class="navigation navigation-prev " aria-label="Previous page: overlayWith">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="charp3.1.html#sharp" class="navigation navigation-next navigation-unique" aria-label="Next page: sharp">
+                
+                <a href="charp3.6.html#rotate" class="navigation navigation-next " aria-label="Next page: rotate">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1286,7 +1379,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"构造器","level":"1.4.1","depth":2,"next":{"title":"sharp","level":"1.4.1.1","depth":3,"anchor":"#sharp","path":"article/charp3.1.md","ref":"./article/charp3.1.md#sharp","articles":[]},"previous":{"title":"API","level":"1.4","depth":1,"ref":"","articles":[{"title":"构造器","level":"1.4.1","depth":2,"path":"article/charp3.1.md","ref":"./article/charp3.1.md","articles":[{"title":"sharp","level":"1.4.1.1","depth":3,"anchor":"#sharp","path":"article/charp3.1.md","ref":"./article/charp3.1.md#sharp","articles":[]},{"title":"format","level":"1.4.1.2","depth":3,"anchor":"#format","path":"article/charp3.1.md","ref":"./article/charp3.1.md#format","articles":[]},{"title":"versions","level":"1.4.1.3","depth":3,"anchor":"#versions","path":"article/charp3.1.md","ref":"./article/charp3.1.md#versions","articles":[]},{"title":"queue","level":"1.4.1.4","depth":3,"anchor":"#queue","path":"article/charp3.1.md","ref":"./article/charp3.1.md#queue","articles":[]}]},{"title":"输入","level":"1.4.2","depth":2,"path":"article/charp3.2.md","ref":"./article/charp3.2.md","articles":[{"title":"clone","level":"1.4.2.1","depth":3,"anchor":"#clone","path":"article/charp3.2.md","ref":"./article/charp3.2.md#clone","articles":[]},{"title":"metadata","level":"1.4.2.2","depth":3,"anchor":"#metadata","path":"article/charp3.2.md","ref":"./article/charp3.2.md#metadata","articles":[]},{"title":"stats","level":"1.4.2.3","depth":3,"anchor":"#stats","path":"article/charp3.2.md","ref":"./article/charp3.2.md#stats","articles":[]},{"title":"limitInputPixels","level":"1.4.2.4","depth":3,"anchor":"#limitinputpixels","path":"article/charp3.2.md","ref":"./article/charp3.2.md#limitinputpixels","articles":[]},{"title":"sequentialRead","level":"1.4.2.5","depth":3,"anchor":"#sequentialread","path":"article/charp3.2.md","ref":"./article/charp3.2.md#sequentialread","articles":[]}]},{"title":"输出","level":"1.4.3","depth":2,"path":"article/charp3.3.md","ref":"./article/charp3.3.md","articles":[{"title":"toFile","level":"1.4.3.1","depth":3,"anchor":"#toFile","path":"article/charp3.3.md","ref":"./article/charp3.3.md#toFile","articles":[]},{"title":"toBuffer","level":"1.4.3.2","depth":3,"anchor":"#toBuffer","path":"article/charp3.3.md","ref":"./article/charp3.3.md#toBuffer","articles":[]},{"title":"withMetadata","level":"1.4.3.3","depth":3,"anchor":"#withMetadata","path":"article/charp3.3.md","ref":"./article/charp3.3.md#withMetadata","articles":[]},{"title":"jpeg","level":"1.4.3.4","depth":3,"anchor":"#jpeg","path":"article/charp3.3.md","ref":"./article/charp3.3.md#jpeg","articles":[]},{"title":"png","level":"1.4.3.5","depth":3,"anchor":"#png","path":"article/charp3.3.md","ref":"./article/charp3.3.md#png","articles":[]},{"title":"webp","level":"1.4.3.6","depth":3,"anchor":"#webp","path":"article/charp3.3.md","ref":"./article/charp3.3.md#webp","articles":[]},{"title":"tiff","level":"1.4.3.7","depth":3,"anchor":"#tiff","path":"article/charp3.3.md","ref":"./article/charp3.3.md#tiff","articles":[]},{"title":"raw","level":"1.4.3.8","depth":3,"anchor":"#raw","path":"article/charp3.3.md","ref":"./article/charp3.3.md#raw","articles":[]},{"title":"toFormat","level":"1.4.3.9","depth":3,"anchor":"#toFormat","path":"article/charp3.3.md","ref":"./article/charp3.3.md#toFormat","articles":[]},{"title":"tile","level":"1.4.3.10","depth":3,"anchor":"#tile","path":"article/charp3.3.md","ref":"./article/charp3.3.md#tile","articles":[]}]},{"title":"调整图像","level":"1.4.4","depth":2,"path":"article/charp3.4.md","ref":"./article/charp3.4.md","articles":[{"title":"resize","level":"1.4.4.1","depth":3,"anchor":"#resize","path":"article/charp3.4.md","ref":"./article/charp3.4.md#resize","articles":[]},{"title":"extend","level":"1.4.4.2","depth":3,"anchor":"#extend","path":"article/charp3.4.md","ref":"./article/charp3.4.md#extend","articles":[]},{"title":"extract","level":"1.4.4.3","depth":3,"anchor":"#extract","path":"article/charp3.4.md","ref":"./article/charp3.4.md#extract","articles":[]},{"title":"trim","level":"1.4.4.4","depth":3,"anchor":"#trim","path":"article/charp3.4.md","ref":"./article/charp3.4.md#trim","articles":[]}]},{"title":"合成图像","level":"1.4.5","depth":2,"path":"article/charp3.5.md","ref":"./article/charp3.5.md","articles":[{"title":"overlayWith","level":"1.4.5.1","depth":3,"anchor":"#overlayWith","path":"article/charp3.5.md","ref":"./article/charp3.5.md#overlayWith","articles":[]}]},{"title":"图像操作","level":"1.4.6","depth":2,"path":"article/charp3.6.md","ref":"./article/charp3.6.md","articles":[{"title":"rotate","level":"1.4.6.1","depth":3,"anchor":"#rotate","path":"article/charp3.6.md","ref":"./article/charp3.6.md#rotate","articles":[]},{"title":"flip","level":"1.4.6.2","depth":3,"anchor":"#flip","path":"article/charp3.6.md","ref":"./article/charp3.6.md#flip","articles":[]},{"title":"flop","level":"1.4.6.3","depth":3,"anchor":"#flop","path":"article/charp3.6.md","ref":"./article/charp3.6.md#flop","articles":[]},{"title":"sharpen","level":"1.4.6.4","depth":3,"anchor":"#sharpen","path":"article/charp3.6.md","ref":"./article/charp3.6.md#sharpen","articles":[]},{"title":"median","level":"1.4.6.5","depth":3,"anchor":"#median","path":"article/charp3.6.md","ref":"./article/charp3.6.md#median","articles":[]},{"title":"blur","level":"1.4.6.6","depth":3,"anchor":"#blur","path":"article/charp3.6.md","ref":"./article/charp3.6.md#blur","articles":[]},{"title":"flatten","level":"1.4.6.7","depth":3,"anchor":"#flatten","path":"article/charp3.6.md","ref":"./article/charp3.6.md#flatten","articles":[]},{"title":"gamma","level":"1.4.6.8","depth":3,"anchor":"#gamma","path":"article/charp3.6.md","ref":"./article/charp3.6.md#gamma","articles":[]},{"title":"negate","level":"1.4.6.9","depth":3,"anchor":"#negate","path":"article/charp3.6.md","ref":"./article/charp3.6.md#negate","articles":[]},{"title":"normalise","level":"1.4.6.10","depth":3,"anchor":"#normalise","path":"article/charp3.6.md","ref":"./article/charp3.6.md#normalise","articles":[]},{"title":"normalize","level":"1.4.6.11","depth":3,"anchor":"#normalize","path":"article/charp3.6.md","ref":"./article/charp3.6.md#normalize","articles":[]},{"title":"convolve","level":"1.4.6.12","depth":3,"anchor":"#convolve","path":"article/charp3.6.md","ref":"./article/charp3.6.md#convolve","articles":[]},{"title":"threshold","level":"1.4.6.13","depth":3,"anchor":"#threshold","path":"article/charp3.6.md","ref":"./article/charp3.6.md#threshold","articles":[]},{"title":"boolean","level":"1.4.6.14","depth":3,"anchor":"#boolean","path":"article/charp3.6.md","ref":"./article/charp3.6.md#boolean","articles":[]},{"title":"linear","level":"1.4.6.15","depth":3,"anchor":"#linear","path":"article/charp3.6.md","ref":"./article/charp3.6.md#linear","articles":[]}]},{"title":"色彩处理","level":"1.4.7","depth":2,"path":"article/charp3.7.md","ref":"./article/charp3.7.md","articles":[{"title":"tint","level":"1.4.7.1","depth":3,"anchor":"#tint","path":"article/charp3.7.md","ref":"./article/charp3.7.md#tint","articles":[]},{"title":"greyscale","level":"1.4.7.2","depth":3,"anchor":"#greyscale","path":"article/charp3.7.md","ref":"./article/charp3.7.md#greyscale","articles":[]},{"title":"grayscale","level":"1.4.7.3","depth":3,"anchor":"#grayscale","path":"article/charp3.7.md","ref":"./article/charp3.7.md#grayscale","articles":[]},{"title":"toColourspace","level":"1.4.7.4","depth":3,"anchor":"#toColourspace","path":"article/charp3.7.md","ref":"./article/charp3.7.md#toColourspace","articles":[]},{"title":"toColorspace","level":"1.4.7.5","depth":3,"anchor":"#toColorspace","path":"article/charp3.7.md","ref":"./article/charp3.7.md#toColorspace","articles":[]}]},{"title":"通道操作","level":"1.4.8","depth":2,"path":"article/charp3.8.md","ref":"./article/charp3.8.md","articles":[{"title":"removeAlpha","level":"1.4.8.1","depth":3,"anchor":"#removeAlpha","path":"article/charp3.8.md","ref":"./article/charp3.8.md#removeAlpha","articles":[]},{"title":"extractChannel","level":"1.4.8.2","depth":3,"anchor":"#extractChannel","path":"article/charp3.8.md","ref":"./article/charp3.8.md#extractChannel","articles":[]},{"title":"joinChannel","level":"1.4.8.3","depth":3,"anchor":"#joinChannel","path":"article/charp3.8.md","ref":"./article/charp3.8.md#joinChannel","articles":[]},{"title":"bandbool","level":"1.4.8.4","depth":3,"anchor":"#bandbool","path":"article/charp3.8.md","ref":"./article/charp3.8.md#bandbool","articles":[]}]},{"title":"工具集","level":"1.4.9","depth":2,"path":"article/charp3.9.md","ref":"./article/charp3.9.md","articles":[{"title":"cache","level":"1.4.9.1","depth":3,"anchor":"#cache","path":"article/charp3.9.md","ref":"./article/charp3.9.md#cache","articles":[]},{"title":"concurrency","level":"1.4.9.2","depth":3,"anchor":"#concurrency","path":"article/charp3.9.md","ref":"./article/charp3.9.md#concurrency","articles":[]},{"title":"counters","level":"1.4.9.3","depth":3,"anchor":"#counters","path":"article/charp3.9.md","ref":"./article/charp3.9.md#counters","articles":[]},{"title":"simd","level":"1.4.9.4","depth":3,"anchor":"#simd","path":"article/charp3.9.md","ref":"./article/charp3.9.md#simd","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp3.1.md","mtime":"2018-11-19T10:07:45.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T04:31:23.438Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"图像操作","level":"1.4.6","depth":2,"next":{"title":"rotate","level":"1.4.6.1","depth":3,"anchor":"#rotate","path":"article/charp3.6.md","ref":"./article/charp3.6.md#rotate","articles":[]},"previous":{"title":"overlayWith","level":"1.4.5.1","depth":3,"anchor":"#overlayWith","path":"article/charp3.5.md","ref":"./article/charp3.5.md#overlayWith","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"article/charp3.6.md","mtime":"2018-11-24T05:37:54.310Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T04:31:23.438Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
